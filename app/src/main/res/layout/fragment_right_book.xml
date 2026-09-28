@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RightBookFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/book_cover_right"
+        android:layout_marginVertical="12dp"
+        android:layout_marginEnd="12dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/paper_extra_card"
+
+            android:layout_marginVertical="8dp"
+            android:layout_marginEnd="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginVertical="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="6dp"
+            android:paddingVertical="16dp"
+            android:layout_marginEnd="20dp"
+            android:translationX="-2dp"
+            android:background="@drawable/paper_card"
+            android:weightSum="21">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+
+            <LinearLayout
+                android:id="@+id/estagio3Button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginVertical="12dp"
+                android:background="@drawable/paper_border"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.85"
+                    android:text="ESTÁGIO 3"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:maxLines="2"
+                    android:textColor="#838383"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="40sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/right_arrow"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/estagio4Button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginVertical="12dp"
+                android:background="@drawable/paper_border"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.85"
+                    android:text="ESTÁGIO 4"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:maxLines="2"
+                    android:textColor="#838383"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="40sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/right_arrow"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/estagio5Button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginVertical="12dp"
+                android:background="@drawable/paper_border"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.85"
+                    android:text="ESTÁGIO 5"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:maxLines="2"
+                    android:textColor="#838383"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="40sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/right_arrow"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/estagio6Button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginVertical="12dp"
+                android:background="@drawable/paper_border"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.85"
+                    android:text="ESTÁGIO 6"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:maxLines="2"
+                    android:textColor="#838383"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="40sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/right_arrow"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8" />
+
+
+
+            <ImageView
+                android:id="@+id/previousPageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/previous_page_icon"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

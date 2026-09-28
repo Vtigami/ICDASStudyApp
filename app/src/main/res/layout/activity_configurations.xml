@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_default"
+    tools:context=".ConfigurationsActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:titleTextColor="@android:color/white"
+        app:navigationIconTint="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textSize="26sp"
+                android:textAlignment="center"
+                android:background="@drawable/orange_title_card"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:elevation="5dp"
+                android:text="CONFIGURAÇÕES"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/white_card"
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp"
+                android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:id="@+id/config1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/gray_back_result"
+                android:layout_marginHorizontal="12dp"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:background="@drawable/white_back_result"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="9dp"
+                    android:text="Volume"/>
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="8dp"
+                    android:valueFrom="0"
+                    android:valueTo="100"
+                    android:stepSize="1"
+                    app:thumbRadius="15dp"
+                    app:thumbElevation="2dp"
+                    app:thumbColor="#FF7749"
+                    app:thumbStrokeColor="@color/dark"
+                    app:thumbStrokeWidth="2dp"
+                    app:tickVisible="false"
+                    app:trackHeight="15dp"
+                    app:trackColorActive="#ff6426"
+                    app:trackColorInactive="#FFFFFF"
+                    app:haloColor="#E3E6FF"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/config2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/white_card"
+                android:layout_marginHorizontal="12dp"
+                android:layout_below="@+id/config1"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:padding="16dp"
+                    android:text="Spinner"/>
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    />
+
+
+            </LinearLayout>
+
+            <CheckBox
+
+                android:id="@+id/confirmOnSelectCB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:button="@color/white"
+                android:background="@drawable/checkbox_config"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:padding="16dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+
+                android:text="Confirmação ao selecionar"
+                android:layout_below="@+id/config2"/>
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="24"
+    android:background="@drawable/back_default"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/titleMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+
+        android:src="@drawable/icdas_icon"
+
+        android:layout_gravity="center"
+        android:text="ICDAS"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeStepGranularity="1sp"/>
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingVertical="20dp"
+        android:layout_weight="19"
+        android:weightSum="26"
+        android:layout_marginVertical="10dp"
+        android:elevation="10dp"
+
+        android:layout_below="@id/titleMain">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/green_border_back"
+            android:orientation="horizontal"
+            android:paddingVertical="12dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_weight="12"
+            android:weightSum="2"
+            android:elevation="10dp"
+
+            android:layout_below="@id/buttonCustomTest">
+            <LinearLayout
+                android:id="@+id/buttonSelectConfig"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginStart="22dp"
+                android:paddingTop="20dp"
+                android:paddingHorizontal="12dp"
+                android:paddingBottom="27dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/transparent_select_config_back">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/select_config_icon"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Config icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="TROCAR \nPARÂMETROS"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="34sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonIniciar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginStart="9dp"
+
+                android:paddingHorizontal="12dp"
+
+                android:layout_marginBottom="12dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="27dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/green_button">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/iniciar_icon"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Config icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="INICIAR"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="34sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/buttonIniciar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="85dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:layout_marginTop="60dp"-->
+<!--            android:background="@drawable/green_button"-->
+<!--            android:clickable="true"-->
+<!--            android:gravity="start"-->
+<!--            android:paddingStart="30dp"-->
+<!--            android:paddingTop="20dp"-->
+<!--            android:paddingBottom="27dp"-->
+<!--            android:text="INICIAR"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="26sp"-->
+<!--            android:textStyle="bold"/>-->
+
+        <LinearLayout
+            android:id="@+id/buttonCustomTest"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:weightSum="10"
+
+            android:translationY="-5dp"
+
+            android:layout_marginHorizontal="40dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/create_button"
+            android:layout_weight="5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_below="@+id/buttonIniciar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:clickable="true"
+            android:text="CRIAR TESTE CUSTOMIZADO"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeStepGranularity="1sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/create_icon"
+                android:layout_marginBottom="12dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/yellow_emphasis"
+                android:scaleType="fitCenter"
+                android:contentDescription="Create icon" />
+
+        </LinearLayout>
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/buttonConfigurations"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/buttonCustomTest"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:background="@drawable/orange_button"-->
+<!--            android:clickable="true"-->
+<!--            android:gravity="start"-->
+<!--            android:paddingStart="30dp"-->
+<!--            android:paddingTop="20dp"-->
+<!--            android:paddingBottom="27dp"-->
+<!--            android:text="CONFIGURAÇÕES"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="26sp"-->
+<!--            android:textStyle="bold" />-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            android:layout_below="@id/buttonCustomTest">
+            <LinearLayout
+                android:id="@+id/buttonConteudo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginStart="18dp"
+                android:paddingTop="20dp"
+                android:paddingHorizontal="12dp"
+                android:paddingBottom="27dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/purple_button">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/book_icon_simplified"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Config icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="CONTEÚDO"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonConfigurations"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginStart="9dp"
+
+                android:paddingHorizontal="12dp"
+
+                android:paddingTop="20dp"
+                android:paddingBottom="27dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/orange_button">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/save_icon"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Config icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:text="RESULTADOS"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="24sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

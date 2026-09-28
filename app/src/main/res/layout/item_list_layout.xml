@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="12dp"
+    android:weightSum="12"
+    android:background="@drawable/item_list_back">
+
+    <TextView
+        android:id="@+id/nameTF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingHorizontal="10dp"
+        android:text="Teste"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginStart="6dp"
+        android:layout_marginVertical="12dp"
+
+        android:textColor="@color/white"
+        android:maxLines="3"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="1sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="2dp"
+        android:paddingBottom="6dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_weight="7">
+
+        <LinearLayout
+            android:id="@+id/back1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/unselected_transparent_border"
+            android:weightSum="3"
+            android:orientation="vertical"
+            android:elevation="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/num_cases_icon"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/numCases"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="999"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="40sp"
+                android:autoSizeStepGranularity="1sp"/>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/back2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/unselected_transparent_border"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:elevation="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/clock_icon"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="99:99"
+                android:gravity="center"
+
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="8dp"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="40sp"
+                android:autoSizeStepGranularity="1sp"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <ImageView
+            android:id="@+id/delBT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/filled_close"
+            android:layout_margin="2dp"
+            android:layout_alignParentEnd="true"
+            android:elevation="5dp"/>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

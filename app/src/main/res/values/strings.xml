@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">ICDAS app</string>
+
+    <string-array name="icdas">
+        <item>Sistema Internacional de Detecção e Avaliação de Cárie (ICDAS) </item>
+        <item> O Sistema Internacional de Detecção e Avaliação de Cárie (ICDAS) pode ser utilizado na forma de escore de dois dígitos, o que possibilita uma avaliação mais completa e padronizada da condição da superfície dentária. Esse sistema foi desenvolvido com base em evidências clínicas e histológicas, com o objetivo de aumentar a sensibilidade diagnóstica, especialmente em lesões iniciais de cárie, permitindo sua detecção em estágios não cavitados e favorecendo abordagens minimamente invasivas (ISMAIL et al., 2007).</item>
+        <item> O primeiro dígito do ICDAS descreve a condição geral da superfície dentária, incluindo a presença de restaurações e selantes. Ele permite diferenciar dentes hígidos de dentes previamente restaurados ou protegidos por selantes, contribuindo para a caracterização do histórico clínico da superfície avaliada. Assim, esse componente não se refere diretamente à atividade de cárie, mas ao estado estrutural e restaurador do elemento dentário.</item>
+        <item> O segundo dígito corresponde à classificação da lesão de cárie propriamente dita, variando de 0 a 6, de acordo com a severidade e profundidade do processo carioso. Essa escala segue critérios visuais padronizados baseados em alterações do esmalte e da dentina, sendo:</item>
+        <item> /numLine 0 Superfície dentária hígida, sem evidência visual de cárie após secagem de aproximadamente 5 segundos.</item>
+        <item> /numLine 1 Primeira alteração visual detectável do esmalte, observada apenas após secagem, caracterizada por opacidade discreta ou perda inicial de translucidez.</item>
+        <item> /numLine 2 Alteração visual evidente do esmalte, com opacidade ou mudança de cor perceptível em superfície úmida, indicando desmineralização mais avançada.</item>
+        <item> /numLine 3 Cavitação localizada restrita ao esmalte, associada a área opaca ou pigmentada, sem exposição de dentina.</item>
+        <item> /numLine 4 Lesão com sombreamento da dentina subjacente, podendo ou não haver descontinuidade do esmalte, indicando progressão para camadas mais profundas.</item>
+        <item> /numLine 5 Cavidade em esmalte com exposição de dentina subjacente, caracterizando lesão cavitada franca.</item>
+        <item> /numLine 6 Cavitação extensa com exposição de dentina e comprometimento estrutural envolvendo mais da metade da superfície dentária.</item>
+        <item>Essa estrutura em dois dígitos permite maior precisão diagnóstica, pois integra informações sobre o histórico restaurador do dente e a severidade atual da lesão, sendo amplamente utilizada em pesquisas epidemiológicas e na prática clínica baseada em evidências (ISMAIL et al., 2007; PORTELLA et al., 2023). A classificação dos diferentes estágios dos dentes extraídos está representada na FIGURA 1. </item>
+        <item>/caption FIGURA 1 – ASPECTOS CLÍNICOS DE SUPERFÍCIES DENTÁRIAS CLASSIFICADAS PELO SEGUNDO CÓDIGO DO ÍNDICE ICDAS: A – ICDAS=0; B – ICDAS=1/2; C – ICDAS=3; D – ICDAS=4; E – ICDAS=5; F – ICDAS=6.</item>
+        <item>file:///android_asset/content_images/allCarieStages.png</item>
+        <item>/caption FONTE: PORTELLA et al., 2023.</item>
+        <item>/caption QUADRO 1 -CRITÉRIO DO ÍNDICE DO SISTEMA INTERNACIONAL DE DETECÇÃO E AVALIAÇÃO DE CÁRIE (ICDAS)</item>
+
+        <item>/caption Primeiro código (condição restauradora)</item>
+        <item> /numLine Cod Descrição</item>
+        <item> /horLine</item>
+        <item> /numLine 0 Superfície não selada e não restaurada</item>
+        <item> /numLine 1 Selante parcial</item>
+        <item> /numLine 2 Selante completo</item>
+        <item> /numLine 3 Restauração com cor semelhante ao dente</item>
+        <item> /numLine 4 Restauração com amálgama</item>
+        <item> /numLine 5 Coroa de aço</item>
+        <item> /numLine 6 Coroa ou faceta de porcelana, ouro ou metalocerâmica</item>
+        <item> /numLine 7 Restauração fraturada ou perdido</item>
+        <item> /numLine 8 Restauração provisória</item>
+
+        <item>/caption Segundo código (severidade da cárie)</item>
+        <item> /numLine Cod Descrição</item>
+        <item> /horLine</item>
+        <item> /numLine 0 Nenhuma ou sutil alteração na translucidez do esmalte após secagem de 5s</item>
+        <item> /numLine 1 Opacidade dificilmente visível na superfície úmida, mas notável após secagem</item>
+        <item> /numLine 2 Opacidade visível sem secagem</item>
+        <item> /numLine 3 Cavitação localizada em esmalte opaco ou pigmentado, sem dentina visível</item>
+        <item> /numLine 4 Sombreamento da dentina subjacente, com ou sem rompimento de esmalte</item>
+        <item> /numLine 5 Cavitação em esmalte opaco ou pigmentado com exposição da dentina subjacente</item>
+        <item> /numLine 6 Cavitação em esmalte opaco ou pigmentado com exposição da dentina subjacente, envolvendo mais da metade da superfície</item>
+
+        <item>ISMAIL, A. I.; SOHN, W.; TELLEZ, M.; AMAYA, A.; SEN, A.; HASSON, H. The International Caries Detection and Assessment System (ICDAS): an integrated system for measuring dental caries. Community Dentistry and Oral Epidemiology, Copenhagen, v. 35, n. 3, p. 170–178, 2007. DOI: https://doi.org/10.1111/j.1600-0528.2007.00347.x.</item>
+        <item>PORTELLA, P. D.; OLIVEIRA, L. F. de; FERREIRA, M. F. C.; DIAS, B. C.; SOUZA, J. F. de; ASSUNÇÃO, L. R. D. S. Improving accuracy of early dental carious lesions detection using deep learning-based automated method. Clinical Oral Investigations, v. 27, n. 12, p. 7663–7670, dez. 2023. DOI: https://doi.org/10.1007/s00784-023-05355-x. </item>
+    </string-array>
+
+    <string-array name="icdas_table">
+        <item>Segundo código (severidade da cárie)</item>
+        <item> /numLine Cod Descrição</item>
+        <item> /horLine</item>
+        <item> /numLine 0 Nenhuma ou sutil alteração na translucidez do esmalte após secagem de 5s</item>
+        <item> /numLine 1 Opacidade dificilmente visível na superfície úmida, mas notável após secagem</item>
+        <item> /numLine 2 Opacidade visível sem secagem</item>
+        <item> /numLine 3 Cavitação localizada em esmalte opaco ou pigmentado, sem dentina visível</item>
+        <item> /numLine 4 Sombreamento da dentina subjacente, com ou sem rompimento de esmalte</item>
+        <item> /numLine 5 Cavitação em esmalte opaco ou pigmentado com exposição da dentina subjacente</item>
+        <item> /numLine 6 Cavitação em esmalte opaco ou pigmentado com exposição da dentina subjacente, envolvendo mais da metade da superfície</item>
+
+    </string-array>
+
+    <string-array name="higido">
+        <item>ESTÁGIO HÍGIDO</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img1.png</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img2.png</item>
+    </string-array>
+
+    <string-array name="stage1">
+        <item>ESTÁGIO 1</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img1.png</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img2.png</item>
+    </string-array>
+
+    <string-array name="stage2">
+        <item>ESTÁGIO 2</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img1.png</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img2.png</item>
+    </string-array>
+
+    <string-array name="stage3">
+        <item>ESTÁGIO 3</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img1.png</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img2.png</item>
+    </string-array>
+
+    <string-array name="stage4">
+        <item>ESTÁGIO 4</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img1.png</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img2.png</item>
+    </string-array>
+
+    <string-array name="stage5">
+        <item>ESTÁGIO 5</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img1.png</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img2.png</item>
+    </string-array>
+
+    <string-array name="stage6">
+        <item>ESTÁGIO 6</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img1.png</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+        <item>file:///android_asset/content_images/img2.png</item>
+    </string-array>
+
+
+</resources>

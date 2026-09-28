@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="0dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="16dp"
+
+    >
+
+<!--    <TextView-->
+<!--        android:id="@+id/text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Menu"-->
+<!--        android:elevation="2dp"-->
+<!--        android:textSize="28sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        android:paddingVertical="6dp"-->
+<!--        android:background="@drawable/orange_title_card"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_centerHorizontal="true"/>-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        android:padding="15dp"
+        android:background="@drawable/paint_frame">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/stageLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="6dp"
+        android:weightSum="2"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/white_back_result"
+        android:layout_below="@+id/frame">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ESTÁGIO"
+            android:paddingStart="8dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/gold_back_result"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/stageTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LIVRE DE CÁRIE"
+            android:gravity="end"
+            android:layout_marginEnd="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingVertical="8dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/answerLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="6dp"
+        android:weightSum="2"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/white_back_result"
+        android:layout_below="@+id/stageLine">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="RESPOSTA"
+            android:paddingStart="8dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/gold_back_result"
+            android:paddingVertical="8dp"
+            android:layout_marginVertical="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/answerTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LIVRE DE CÁRIE"
+            android:gravity="end"
+            android:layout_marginEnd="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:paddingVertical="8dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

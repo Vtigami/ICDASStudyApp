@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="0dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="16dp"
+
+    >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="      "
+        android:elevation="2dp"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="6dp"
+        android:background="@drawable/orange_title_card"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+            android:background="@drawable/wood_card">
+
+        <RelativeLayout
+            android:layout_marginTop="14dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="true"
+            android:clipToPadding="false"
+            android:background="@drawable/paper_card">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="18dp"
+                android:gravity="center_horizontal"
+                android:text="RESULTADOS"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@id/title"
+                android:background="#ABABAB"/>
+
+            <LinearLayout
+                android:id="@+id/acertosLine"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="6dp"
+                android:weightSum="2"
+                android:background="@drawable/gray_back_result"
+                android:layout_below="@+id/title">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ACERTOS"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="@drawable/white_back_result"
+                    android:paddingVertical="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/acertosTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="100/100"
+                    android:gravity="end"
+                    android:layout_marginEnd="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:paddingVertical="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/porcentagemLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="6dp"
+                android:weightSum="2"
+                android:background="@drawable/gray_back_result"
+                android:layout_below="@+id/acertosLine">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TAXA DE ACERTO"
+                    android:textColor="@color/black"
+                    android:paddingStart="8dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="@drawable/white_back_result"
+                    android:paddingVertical="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/porcentagemTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="100%"
+                    android:gravity="end"
+                    android:layout_marginEnd="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:paddingVertical="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timeLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="6dp"
+                android:weightSum="2"
+                android:background="@drawable/gray_back_result"
+                android:layout_below="@+id/porcentagemLine">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TEMPO"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:background="@drawable/white_back_result"
+                    android:paddingVertical="8dp"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00:00"
+                    android:gravity="end"
+                    android:layout_marginEnd="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:paddingVertical="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/resultsList"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginHorizontal="8dp"
+                android:visibility="gone"
+                android:layout_marginBottom="12dp"
+                android:layout_below="@+id/timeLine"/>
+
+            <TextView
+                android:id="@+id/showHistogramBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ERROS"
+                android:drawableStart="@drawable/graph_icon"
+                android:textColor="@color/white"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:elevation="1dp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"
+                android:padding="12dp"
+                android:background="@drawable/histogram_button_unselected"
+                android:layout_below="@id/resultsList"/>
+
+
+            <LinearLayout
+                android:id="@+id/histogram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone"
+                android:translationY="-6dp"
+                android:layout_below="@id/showHistogramBT">
+
+                <include android:id="@+id/histogramLayout"
+                    layout="@layout/histogram_layout"/>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/buttonsLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_below="@+id/histogram">
+
+
+                <TextView
+                    android:id="@+id/returnButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SAIR"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center|center_vertical"
+                    android:drawableTop="@drawable/exit_icon"
+                    android:drawablePadding="8dp"
+                    android:layout_marginStart="12dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:textColor="@color/white"
+                    android:paddingVertical="16dp"
+
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/cancel_button"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/saveButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SALVAR"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center|center_vertical"
+                    android:drawableTop="@drawable/save_icon"
+                    android:drawablePadding="8dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:textColor="@color/white"
+                    android:paddingVertical="16dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/retry_button"
+                    android:textSize="16sp"/>
+
+
+                <TextView
+                    android:id="@+id/againButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="NOVO TESTE"
+                    android:maxLines="1"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center|center_vertical"
+                    android:drawableTop="@drawable/play_icon"
+                    android:layout_marginEnd="12dp"
+                    android:drawablePadding="8dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:textColor="@color/white"
+                    android:paddingVertical="16dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/confirm_button"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>

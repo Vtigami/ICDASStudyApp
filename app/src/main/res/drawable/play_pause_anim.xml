@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector android:name="vector"
+            android:width="32dp"
+            android:height="32dp"
+            android:viewportWidth="124"
+            android:viewportHeight="124">
+            <path
+                android:name="path_1"
+                android:pathData="M 1 5.882 L 39 5.882 L 39 118.882 L 1 118.882 Z"
+                android:fillColor="#FFFFFF"
+                android:strokeWidth="1"
+                android:fillType="evenOdd"/>
+            <path
+                android:name="path"
+                android:pathData="M 83.026 5.882 L 122.922 5.882 L 122.922 118.882 L 83.026 118.882 Z"
+                android:fillColor="#FFFFFF"
+                android:strokeWidth="1"
+                android:fillType="evenOdd"/>
+        </vector>
+    </aapt:attr>
+
+    <target android:name="path_1">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:duration="600"
+                android:valueFrom="M 1 5.882 L 39 5.882 L 39 118.882 L 1 118.882 Z"
+                android:valueTo="M 4.961 1.085 L 66.8 31.733 L 66.8 93.031 L 4.961 123.679 Z"
+                android:valueType="pathType"
+                android:interpolator="@android:interpolator/linear_out_slow_in"/>
+        </aapt:attr>
+    </target>
+
+    <target android:name="path">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="pathData"
+                android:duration="600"
+                android:valueFrom="M 83.026 5.882 L 122.922 5.882 L 122.922 118.882 L 83.026 118.882 Z"
+                android:valueTo="M 66.8 31.733 L 122.744 61.887 L 122.922 62 L 66.8 93.031 Z"
+                android:valueType="pathType"
+                android:interpolator="@android:interpolator/linear_out_slow_in"/>
+        </aapt:attr>
+    </target>
+</animated-vector>

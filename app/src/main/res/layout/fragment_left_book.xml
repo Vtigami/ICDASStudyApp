@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LeftBookFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/book_cover_left"
+        android:layout_marginVertical="12dp"
+        android:layout_marginStart="12dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/paper_extra_card"
+
+            android:layout_marginVertical="8dp"
+            android:layout_marginStart="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginVertical="8dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="16dp"
+            android:paddingVertical="16dp"
+            android:layout_marginStart="20dp"
+            android:translationX="2dp"
+            android:background="@drawable/paper_card"
+            android:weightSum="21">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:text="SISTEMA ICDAS"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="80sp"
+                android:autoSizeStepGranularity="1sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:weightSum="9"
+                android:paddingHorizontal="16dp"
+                android:layout_weight="2" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    android:background="#B4B4B4"
+                    android:layout_weight="4"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/odonto_symbol_gray"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    android:background="#B4B4B4"
+                    android:layout_weight="4"
+                    android:layout_gravity="center_vertical"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/icdasButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginVertical="12dp"
+                android:background="@drawable/paper_border"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.85"
+                    android:text="ICDAS"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:padding="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:maxLines="2"
+                    android:textColor="#838383"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="40sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/right_arrow"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/estagioHigidoButton"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="3"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingVertical="12dp"-->
+<!--                android:paddingStart="12dp"-->
+<!--                android:paddingEnd="12dp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_marginVertical="12dp"-->
+<!--                android:background="@drawable/paper_border"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.85"-->
+<!--                    android:text="ESTÁGIO HÍGIDO"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="4dp"-->
+<!--                    android:maxLines="2"-->
+<!--                    android:textColor="#838383"-->
+<!--                    android:autoSizeTextType="uniform"-->
+<!--                    android:autoSizeMinTextSize="12sp"-->
+<!--                    android:autoSizeMaxTextSize="40sp"-->
+<!--                    android:autoSizeStepGranularity="1sp"/>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.15"-->
+<!--                    android:src="@drawable/right_arrow"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:adjustViewBounds="true"/>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/estagio1Button"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="3"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingVertical="12dp"-->
+<!--                android:paddingStart="12dp"-->
+<!--                android:paddingEnd="12dp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_marginVertical="12dp"-->
+<!--                android:background="@drawable/paper_border"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.85"-->
+<!--                    android:text="ESTÁGIO 1"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="4dp"-->
+<!--                    android:maxLines="2"-->
+<!--                    android:textColor="#838383"-->
+<!--                    android:autoSizeTextType="uniform"-->
+<!--                    android:autoSizeMinTextSize="12sp"-->
+<!--                    android:autoSizeMaxTextSize="40sp"-->
+<!--                    android:autoSizeStepGranularity="1sp"/>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.15"-->
+<!--                    android:src="@drawable/right_arrow"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:adjustViewBounds="true"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/estagio2Button"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="3"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingVertical="12dp"-->
+<!--                android:paddingStart="12dp"-->
+<!--                android:paddingEnd="12dp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_marginVertical="12dp"-->
+<!--                android:background="@drawable/paper_border"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.85"-->
+<!--                    android:text="ESTÁGIO 2"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginEnd="4dp"-->
+<!--                    android:maxLines="2"-->
+<!--                    android:textColor="#838383"-->
+<!--                    android:autoSizeTextType="uniform"-->
+<!--                    android:autoSizeMinTextSize="12sp"-->
+<!--                    android:autoSizeMaxTextSize="40sp"-->
+<!--                    android:autoSizeStepGranularity="1sp"/>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.15"-->
+<!--                    android:src="@drawable/right_arrow"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:adjustViewBounds="true"/>-->
+
+<!--            </LinearLayout>-->
+
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/nextPageButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_weight="2"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:src="@drawable/next_page_icon"/>-->
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
