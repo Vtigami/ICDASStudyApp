@@ -3,9 +3,18 @@ package com.example.toothdecaystudyapp.anim
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Resources
+import android.graphics.drawable.Drawable
 import android.view.MotionEvent
 import android.view.View
+import android.view.animation.AccelerateInterpolator
 import android.view.animation.OvershootInterpolator
+import android.widget.FrameLayout
+import android.view.Gravity
+import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
 
 class Animations(val context: Context) {
 
@@ -125,6 +134,66 @@ class Animations(val context: Context) {
             false
         }
     }
+
+
+
+
+    fun animateNextImage(
+        container: FrameLayout,
+        imageView: ImageView,
+        path: String
+    ) {
+        // Cria uma cópia independente da imagem atual
+        val oldImage = ImageView(imageView.context).apply {
+
+            layoutParams = FrameLayout.LayoutParams(
+                imageView.width,
+                imageView.height,
+                Gravity.CENTER
+            )
+
+            setImageDrawable(
+                imageView.drawable?.constantState
+                    ?.newDrawable()?.mutate()
+                    ?: imageView.drawable
+            )
+
+            background = imageView.background?.constantState
+                ?.newDrawable()?.mutate()
+                ?: imageView.background
+
+            scaleType = imageView.scaleType
+
+            setPadding(
+                imageView.paddingLeft,
+                imageView.paddingTop,
+                imageView.paddingRight,
+                imageView.paddingBottom
+            )
+
+            elevation = imageView.elevation + 10f
+        }
+
+        // Adiciona a cópia sobre a imagem original
+        container.addView(oldImage)
+
+        // Anima a imagem antiga
+        oldImage.animate()
+            .translationY(500f)
+            .alpha(0f)
+            .setDuration(700)
+            .setInterpolator(AccelerateInterpolator())
+            .withEndAction {
+                container.removeView(oldImage)
+            }
+            .start()
+
+        // Carrega a nova imagem com Glide
+        Glide.with(imageView.context)
+            .load("file:///android_asset/$path")
+            .into(imageView)
+    }
+
 
 
 }

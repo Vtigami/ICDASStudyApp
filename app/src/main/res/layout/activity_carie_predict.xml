@@ -191,17 +191,28 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <ImageView
-            android:id="@+id/dente"
+        <FrameLayout
+            android:id="@+id/denteFrame"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.8"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/dente_s1"
-            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="5dp"
             android:layout_marginBottom="100dp"
+            android:foregroundGravity="center">
 
-            />
+            <ImageView
+                android:id="@+id/dente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dente_s1"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="@drawable/photo_card"
+                android:padding="10dp" />
+
+        </FrameLayout>
 
     </LinearLayout>
 

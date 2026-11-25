@@ -30,6 +30,9 @@ import kotlin.math.max
 
 class DialogResult(private val context: Context) {
 
+    //val NUM_ESTAGIOS = 7
+    val NUM_ESTAGIOS = 6
+
     @SuppressLint("ClickableViewAccessibility")
     suspend fun showResultDialog(scope: CoroutineScope, answerList:MutableList<Int>, runConfig:RunConfig, numAcertos:Int, secondsLeft:Long): Int =
         suspendCancellableCoroutine { continuation ->
@@ -39,7 +42,7 @@ class DialogResult(private val context: Context) {
 
             val dialog = AlertDialog.Builder(context)
                 .setView(view)
-                .setCancelable(true)
+                .setCancelable(false)
                 .create()
 
             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
@@ -86,7 +89,7 @@ class DialogResult(private val context: Context) {
             recyclerView.setHasFixedSize(true)
 
             val result = MutableList(answerList.size) {-1}
-            val histogramResults = MutableList(7){0}
+            val histogramResults = MutableList(NUM_ESTAGIOS){0}
 
 
 
@@ -132,8 +135,9 @@ class DialogResult(private val context: Context) {
 
 
             val numErrorList = listOf(
-                histogramLayout.findViewById<TextView>(R.id.numBar0),
-                histogramLayout.findViewById<TextView>(R.id.numBar1),
+                //histogramLayout.findViewById<TextView>(R.id.numBar0),
+                //histogramLayout.findViewById<TextView>(R.id.numBar1),
+                histogramLayout.findViewById<TextView>(R.id.numBar0or1),
                 histogramLayout.findViewById<TextView>(R.id.numBar2),
                 histogramLayout.findViewById<TextView>(R.id.numBar3),
                 histogramLayout.findViewById<TextView>(R.id.numBar4),
@@ -142,8 +146,9 @@ class DialogResult(private val context: Context) {
             )
 
             val histogramBar = listOf(
-                histogramLayout.findViewById<TextView>(R.id.bar0),
-                histogramLayout.findViewById<TextView>(R.id.bar1),
+                //histogramLayout.findViewById<TextView>(R.id.bar0),
+                //histogramLayout.findViewById<TextView>(R.id.bar1),
+                histogramLayout.findViewById<TextView>(R.id.bar0or1),
                 histogramLayout.findViewById<TextView>(R.id.bar2),
                 histogramLayout.findViewById<TextView>(R.id.bar3),
                 histogramLayout.findViewById<TextView>(R.id.bar4),

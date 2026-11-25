@@ -12,6 +12,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.view.animation.LinearInterpolator
+import android.view.inputmethod.InputMethodManager
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
@@ -32,6 +33,9 @@ import kotlin.math.min
 import kotlin.random.Random
 
 class SplashActivity : AppCompatActivity() {
+
+    val NUM_ESTAGIOS = 6
+    //val NUM_ESTAGIOS = 7
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,13 +111,19 @@ class SplashActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.nameET)
 
         val filter = InputFilter { source, start, end, _, _, _ ->
-            for (i in start until end) {
-                val c = source[i]
-                if (!c.isLetterOrDigit() && !c.isWhitespace()) {
-                    return@InputFilter ""
-                }
+            val text = source.subSequence(start, end).toString()
+
+            if (text.all {
+                    Character.isLetterOrDigit(it) ||
+                            Character.isWhitespace(it) ||
+                            Character.getType(it) == Character.NON_SPACING_MARK.toInt() ||
+                            Character.getType(it) == Character.COMBINING_SPACING_MARK.toInt() ||
+                            Character.getType(it) == Character.ENCLOSING_MARK.toInt()
+                }) {
+                null
+            } else {
+                ""
             }
-            null
         }
 
         editText.filters = arrayOf(filter, InputFilter.LengthFilter(96))
@@ -144,6 +154,12 @@ class SplashActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
         })
 
+        editText.setOnEditorActionListener { _, _, _ ->
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(editText.windowToken, 0)
+            true
+        }
+
 
 
         CoroutineScope(Dispatchers.Main).launch {
@@ -155,7 +171,8 @@ class SplashActivity : AppCompatActivity() {
                 runConfigs = dataStore.loadConfigs()[selectedIndex - 1]
             }
 
-            val paths = listOf("stage1","stage2","stage3","stage4","stage5","stage6","higido")
+            //val paths = listOf("stage1","stage2","stage3","stage4","stage5","stage6","higido")
+            val paths = listOf("stage2","stage3","stage4","stage5","stage6","higido")
 
             val qtList = createQtdForEachStage(runConfigs.numCarieTests)
 
@@ -220,14 +237,14 @@ class SplashActivity : AppCompatActivity() {
 
     fun createQtdForEachStage(numCarieTests:Int):List<Int>{
 
-        val startNum = max((numCarieTests-1)/7,0)
-        val qtToAdd = (numCarieTests)-(startNum*7)
+        val startNum = max((numCarieTests-1)/NUM_ESTAGIOS,0)
+        val qtToAdd = (numCarieTests)-(startNum*NUM_ESTAGIOS)
 
-        val list = MutableList(7) { startNum }
+        val list = MutableList(NUM_ESTAGIOS) { startNum }
 
 
         for(i in 0 until qtToAdd){
-            var num = Random.nextInt(0, 7);
+            var num = Random.nextInt(0, NUM_ESTAGIOS);
 
             while(list[num]>=startNum+2){
                 num=nextPos(num)
@@ -242,7 +259,7 @@ class SplashActivity : AppCompatActivity() {
 
 
     fun nextPos(pos:Int):Int{
-        return (pos+1)%7
+        return (pos+1)%NUM_ESTAGIOS
     }
 
     fun getRandomImagesFromAssets(context: Context, folderName: String, count: Int): List<String> {
@@ -251,7 +268,7 @@ class SplashActivity : AppCompatActivity() {
         val files = assetManager.list(folderName)?.toList() ?: emptyList()
 
         return files
-            .filter { it.endsWith(".png", true) || it.endsWith(".jpg", true) || it.endsWith(".jpeg", true) }
+            .filter { it.endsWith(".png", true) || it.endsWith(".jpg", true) || it.endsWith(".jpeg", true)|| it.endsWith(".webp", true) }
             .shuffled()
             .take(count)
             .map { "$folderName/$it" }

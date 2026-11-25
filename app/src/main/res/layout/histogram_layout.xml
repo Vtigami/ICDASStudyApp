@@ -90,61 +90,109 @@
 
     </LinearLayout>
 
+<!--    <RelativeLayout-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/numBar0"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:text="1"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:textColor="#D10000"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="bottom"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_above="@+id/bar0"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/bar0"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="190dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/graph_bar"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:layout_weight="4"-->
+<!--            android:layout_above="@id/l0" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/l0"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:text="1"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:background="@color/white"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_alignParentBottom="true"/>-->
+
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/numBar1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:text="1"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:textColor="#D10000"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="bottom"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_above="@+id/bar1"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/bar1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="171dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/graph_bar"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:layout_weight="4"-->
+<!--            android:layout_above="@id/l1" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/l1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:text="2"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:background="@color/white"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_alignParentBottom="true"/>-->
+
+<!--    </RelativeLayout>-->
+
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
-
-    <TextView
-        android:id="@+id/numBar0"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:text="1"
-        android:layout_centerHorizontal="true"
-        android:textColor="#D10000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="bottom"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/bar0"/>
+        android:layout_weight="2">
 
         <TextView
-            android:id="@+id/bar0"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:background="@drawable/graph_bar"
-            android:layout_margin="5dp"
-            android:layout_weight="4"
-            android:layout_above="@id/l0" />
-
-        <TextView
-            android:id="@+id/l0"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="1"
-            android:layout_centerHorizontal="true"
-            android:background="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_alignParentBottom="true"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/numBar1"
+            android:id="@+id/numBar0or1"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:text="1"
@@ -156,25 +204,25 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:layout_alignParentTop="true"
-            android:layout_above="@+id/bar1"/>
+            android:layout_above="@+id/bar0or1"/>
 
         <TextView
-            android:id="@+id/bar1"
+            android:id="@+id/bar0or1"
             android:layout_width="match_parent"
-            android:layout_height="171dp"
+            android:layout_height="190dp"
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:layout_gravity="center"
             android:background="@drawable/graph_bar"
             android:layout_margin="5dp"
             android:layout_weight="4"
-            android:layout_above="@id/l1" />
+            android:layout_above="@id/l0or1" />
 
         <TextView
-            android:id="@+id/l1"
+            android:id="@+id/l0or1"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="2"
+            android:text="1 ou 2"
             android:layout_centerHorizontal="true"
             android:background="@color/white"
             android:textSize="16sp"

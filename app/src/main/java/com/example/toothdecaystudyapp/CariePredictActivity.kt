@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.animation.OvershootInterpolator
+import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.ProgressBar
@@ -37,6 +38,8 @@ import kotlinx.coroutines.launch
 
 class CariePredictActivity : AppCompatActivity() {
 
+
+    val anim = Animations(this)
     var confirmOnSelect=false
     var volume = 0f
 
@@ -82,7 +85,7 @@ class CariePredictActivity : AppCompatActivity() {
 
 
 
-        val anim = Animations(this)
+
         val settingsDataStore = SettingsDataStore(this)
 
         lifecycleScope.launch {
@@ -106,7 +109,17 @@ class CariePredictActivity : AppCompatActivity() {
         val denteNum = findViewById<TextView>(R.id.denteNum)
         val maxDenteNum = findViewById<TextView>(R.id.maxDenteNum)
 
-        var selectValue = 6
+        //val buttons = listOf(bottomSheetLayout.findViewById<TextView>(R.id.level1Button),bottomSheetLayout.findViewById<TextView>(R.id.level2Button),bottomSheetLayout.findViewById<TextView>(R.id.level3Button),
+        //    bottomSheetLayout.findViewById<TextView>(R.id.level4Button),bottomSheetLayout.findViewById<TextView>(R.id.level5Button),bottomSheetLayout.findViewById<TextView>(R.id.level6Button),bottomSheetLayout.findViewById<TextView>(R.id.carieFreeButton));
+
+        val buttons = listOf(bottomSheetLayout.findViewById<TextView>(R.id.level1ou2Button),bottomSheetLayout.findViewById<TextView>(R.id.level3Button),
+            bottomSheetLayout.findViewById<TextView>(R.id.level4Button),bottomSheetLayout.findViewById<TextView>(R.id.level5Button),bottomSheetLayout.findViewById<TextView>(R.id.level6Button),bottomSheetLayout.findViewById<TextView>(R.id.carieFreeButton));
+
+
+
+        var selectValue = buttons.size-1
+
+
 
 
         val bottomSheetBehavior: BottomSheetBehavior<*> = BottomSheetBehavior.from(bottomSheet)
@@ -134,8 +147,6 @@ class CariePredictActivity : AppCompatActivity() {
         }
 
         
-        val buttons = listOf(bottomSheetLayout.findViewById<TextView>(R.id.level1Button),bottomSheetLayout.findViewById<TextView>(R.id.level2Button),bottomSheetLayout.findViewById<TextView>(R.id.level3Button),
-            bottomSheetLayout.findViewById<TextView>(R.id.level4Button),bottomSheetLayout.findViewById<TextView>(R.id.level5Button),bottomSheetLayout.findViewById<TextView>(R.id.level6Button),bottomSheetLayout.findViewById<TextView>(R.id.carieFreeButton));
 
         val tones =  listOf(
             261.63, // Do (C4)
@@ -219,9 +230,9 @@ class CariePredictActivity : AppCompatActivity() {
                     if (runConfig != null) {
 
                         answerList.set(runIndex,selectValue)
+                        Log.d("comparacao","selecionado = ${selectValue}, esperado = ${runConfig.carieTests.elementAt(runIndex).carieType}")
                         if(selectValue==runConfig.carieTests.elementAt(runIndex).carieType){
                             numAcertos++
-                            //doSomething
                         }
                     }
                     if(runIndex<runIndexMax-1) {
@@ -323,16 +334,23 @@ class CariePredictActivity : AppCompatActivity() {
 
     fun nextCase(){
 
+        val denteFrame =findViewById<FrameLayout>(R.id.denteFrame)
         val denteImg = findViewById<ImageView>(R.id.dente)
         val denteNum = findViewById<TextView>(R.id.denteNum)
 
         runIndex++
         runConfig?.carieTests?.elementAt(runIndex)?.carieImg?.let { path ->
+//            Glide.with(denteImg.context)
+//                .load("file:///android_asset/$path")
+//                .into(denteImg)
+            anim.animateNextImage(denteFrame,denteImg,path)
 
-            Glide.with(denteImg.context)
-                .load("file:///android_asset/$path")
-                .into(denteImg)
         }
+
+
+
+
+
         denteNum.text = ""+(runIndex+1)
     }
 
@@ -363,7 +381,8 @@ class CariePredictActivity : AppCompatActivity() {
     }
 
     fun getSelectedValueName(value:Int):String{
-        if(value == 6)
+        //if(value == 6)
+        if(value == 5)
             return "HÍGIDO"
         return "ESTÁGIO "+(value+1).toString()
     }
@@ -374,6 +393,7 @@ class CariePredictActivity : AppCompatActivity() {
         }
 
     }
+
 
 
     fun dpToInt(i: Int):Int{

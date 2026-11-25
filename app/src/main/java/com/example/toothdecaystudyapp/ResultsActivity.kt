@@ -46,6 +46,7 @@ class ResultsActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             resultList = dataStore.loadTestResults()
+            resultList.reverse()
 
             recyclerView.adapter =
                 ResultsAdapter(

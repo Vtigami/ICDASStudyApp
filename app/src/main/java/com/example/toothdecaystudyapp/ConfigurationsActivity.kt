@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.CheckBox
+import android.widget.ImageView
 import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import com.example.toothdecaystudyapp.anim.Animations
 import com.google.android.material.slider.Slider
 import kotlinx.coroutines.launch
 
@@ -26,20 +28,30 @@ class ConfigurationsActivity : AppCompatActivity() {
             insets
         }
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar);
-        setSupportActionBar(toolbar)
+//        val toolbar = findViewById<Toolbar>(R.id.toolbar);
+//        setSupportActionBar(toolbar)
+//
+//        supportActionBar?.apply {
+//            setDisplayHomeAsUpEnabled(true)
+//            setDisplayShowHomeEnabled(true)
+//            setTitle("")
+//        }
+//
+//        toolbar.navigationIcon?.setTint(getColor(R.color.back_arrow))
+//
+//        toolbar.setNavigationOnClickListener {
+//            onBackPressedDispatcher.onBackPressed()
+//
+//        }
 
-        supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(true)
-            setDisplayShowHomeEnabled(true)
-            setTitle("")
-        }
+        val anim = Animations(this)
 
-        toolbar.navigationIcon?.setTint(getColor(R.color.back_arrow))
+        val returnButton = findViewById<ImageView>(R.id.returnButton)
 
-        toolbar.setNavigationOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+        anim.scaleButtonAnim(returnButton)
 
+        returnButton.setOnClickListener(){
+            finish()
         }
 
         val settingsDataStore = SettingsDataStore(this)
@@ -86,12 +98,12 @@ class ConfigurationsActivity : AppCompatActivity() {
 
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.toolbar) {
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        if (item.itemId == R.id.toolbar) {
+//            return true
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 
 
 

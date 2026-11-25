@@ -21,6 +21,8 @@ class ResultsAdapter(
     private val scope: CoroutineScope
 ) : RecyclerView.Adapter<ResultsAdapter.ViewHolder>() {
 
+
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val acertosTV: TextView = view.findViewById(R.id.acertosTV)
         val testTimeTV: TextView = view.findViewById(R.id.testTimeTV)
@@ -88,8 +90,9 @@ class ResultsAdapter(
                 if(!histogramCreated){
 
                     val numErrorList = listOf(
-                        holder.histogramLayout.findViewById<TextView>(R.id.numBar0),
-                        holder.histogramLayout.findViewById<TextView>(R.id.numBar1),
+                        //holder.histogramLayout.findViewById<TextView>(R.id.numBar0),
+                        //holder.histogramLayout.findViewById<TextView>(R.id.numBar1),
+                        holder.histogramLayout.findViewById<TextView>(R.id.numBar0or1),
                         holder.histogramLayout.findViewById<TextView>(R.id.numBar2),
                         holder.histogramLayout.findViewById<TextView>(R.id.numBar3),
                         holder.histogramLayout.findViewById<TextView>(R.id.numBar4),
@@ -98,8 +101,9 @@ class ResultsAdapter(
                     )
 
                     val histogramBar = listOf(
-                        holder.histogramLayout.findViewById<TextView>(R.id.bar0),
-                        holder.histogramLayout.findViewById<TextView>(R.id.bar1),
+                        //holder.histogramLayout.findViewById<TextView>(R.id.bar0),
+                        //holder.histogramLayout.findViewById<TextView>(R.id.bar1),
+                        holder.histogramLayout.findViewById<TextView>(R.id.bar0or1),
                         holder.histogramLayout.findViewById<TextView>(R.id.bar2),
                         holder.histogramLayout.findViewById<TextView>(R.id.bar3),
                         holder.histogramLayout.findViewById<TextView>(R.id.bar4),
